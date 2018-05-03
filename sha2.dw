@@ -1,0 +1,895 @@
+def main
+[
+input read_new # 1 1 
+input read_data # 1 8 
+input write_busy # 1 1 
+output write_new # 1 1 
+output write_data # 1 8 
+register vstupPocet # 1 6 
+register vystupPocet # 1 6 
+register vstup # 56 8 
+register vystup # 64 4 
+register stav # 1 3 
+{regC0} regC stav # 35 47
+{const0} const (0) # 1 3 # 87 54
+{eq0} eq # 69 114
+{if0} if # 113 227 878 724
+{in0} in read_new # 160 114
+{log_and0} log_and # 111 170
+{const1} const (55) # 1 6 # 283 247
+{regC1} regC vstupPocet # 194 256
+{eq1} eq # 232 323
+{in1} in read_data # 435 246
+{const2} const (13) # 1 8 # 351 245
+{const3} const (10) # 1 8 # 527 246
+{eq2} eq # 389 300
+{eq3} eq # 488 299
+{log_or0} log_or # 440 357
+{log_or1} log_or # 339 412
+{if1} if # 165 481 391 648
+{if2} if # 457 526 830 718
+{log_not0} log_not # 430 461
+{regZ0} regZ stav # 194 618
+{const21} const (1) # 1 3 # 193 541
+{regZ_index0} regZ_index vstup # 331 623
+{mod0} mod # 827 335
+{const4} const (b10000000) # 1 8 # 314 504
+{regZ_index1} regZ_index vstup # 612 669
+{in2} in read_data # 512 587
+{regZ1} regZ vstupPocet # 706 703
+{inc1} inc # 708 636
+{out0} out write_data # 513 675
+{out1} out write_new # 790 645
+{const5} const (1) # 1 1 # 792 574
+{log_and1} log_and # 150 887
+{const6} const (1) # 1 3 # 78 702
+{in3} in write_busy # 354 764
+{log_not1} log_not # 353 825
+{eq4} eq # 52 771
+{if3} if # 150 946 432 1045
+{const22} const (2) # 1 3 # 385 957
+{regZ2} regZ stav # 385 1027
+{out2} out write_new # 190 1016
+{out3} out write_data # 291 1016
+{const7} const (1) # 1 1 # 189 957
+{const8} const (10) # 1 8 # 292 958
+{const9} const (2) # 1 3 # 644 784
+{eq5} eq # 619 841
+{log_and2} log_and # 525 903
+{if4} if # 525 960 889 1282
+{regC4} regC vstupPocet # 605 978
+{const10} const (0) # 1 6 # 681 984
+{eq6} eq # 606 1050
+{if5} if # 702 1155 788 1268
+{regZ3} regZ stav # 744 1235
+{const11} const (0) # 1 3 # 744 1167
+{log_not2} log_not # 547 1098
+{if6} if # 547 1152 650 1266
+{const23} const (3) # 1 3 # 593 1163
+{regZ4} regZ stav # 595 1237
+{const12} const (13) # 1 8 # 739 1007
+{const13} const (1) # 1 1 # 840 1005
+{out4} out write_data # 739 1074
+{out5} out write_new # 842 1074
+{regC6} regC stav # 599 772
+{regC7} regC stav # 44 937
+{const14} const (3) # 1 3 # 98 947
+{eq7} eq # 69 1010
+{if7} if # 28 1091 444 1813
+{const15} const (8) # 1 32 # 354 1125
+{regC8} regC vstupPocet # 281 1116
+{mul0} mul # 326 1182
+{change0} change # 8 8 # 292 1297
+{regC9} regC vstup # 208 1287
+{concat0} concat # 236 1350
+{change1} change # 16 32 # 185 1416
+{if8} if # 68 1545 381 1803
+{regC3} regC stav # 35 692
+{const24} const (4) # 1 3 # 339 1593
+{regZ6} regZ stav # 339 1668
+{const17} const (0) # 1 6 # 211 1697
+{regZ7} regZ vstupPocet # 155 1779
+{regZ8} regZ vystupPocet # 275 1778
+{regZ9} regZ vstup # 210 1638
+{const18} const (0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0) # 56 8 # 210 1563
+{log_and3} log_and # 516 1453
+{const19} const (4) # 1 3 # 575 1339
+{regC11} regC stav # 530 1329
+{eq8} eq # 553 1397
+{if9} if # 516 1513 905 1912
+{regZ10} regZ vystupPocet # 841 1672
+{regC12} regC vystupPocet # 841 1533
+{inc5} inc # 841 1601
+{out6} out write_new # 565 1576
+{const20} const (1) # 1 1 # 565 1521
+{regC13} regC vystup # 545 1632
+{out7} out write_data # 603 1886
+{eq9} eq # 698 1711
+{const25} const (63) # 1 6 # 735 1643
+{regC18} regC vystupPocet # 653 1633
+{if10} if # 698 1767 882 1875
+{regZ11} regZ stav # 737 1847
+{const26} const (1) # 1 3 # 737 1780
+{regZ12} regZ vystup # 819 1852
+{const27} const (0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0) # 64 4 # 819 1780
+{index0} index # 601 1711
+{regZ5} regZ vystup # 100 1700
+{sub0} sub # 797 407
+{const33} const (3) # 1 6 # 768 334
+{const32} const (4) # 1 6 # 691 263
+{reverse3} reverse # 602 1771
+{const31} const (0) # 1 32 # 261 1179
+{concat3} concat # 291 1236
+{regC5} regC vstupPocet # 614 255
+{add0} add # 738 476
+{div0} div # 654 324
+{mul1} mul # 693 412
+{regC10} regC vstupPocet # 796 253
+{regC2} regC vstupPocet # 706 576
+{const34} const (4) # 1 6 # 865 261
+{sha0} call sha # 77 1475
+{hexToAscii0} call hexToAscii # 602 1832
+# 425 562 624 529 484 1365 484 1056 468 911 
+# 0 eq0 0 regC0 
+# 1 eq0 0 const0 
+# 0 if0 2 log_and0 
+# 0 log_and0 2 eq0 
+# 1 log_and0 0 in0 
+# 0 eq1 0 regC1 
+# 1 eq1 0 const1 
+# 0 eq2 0 const2 
+# 1 eq2 0 in1 
+# 0 eq3 0 in1 
+# 1 eq3 0 const3 
+# 0 log_or0 2 eq2 
+# 1 log_or0 2 eq3 
+# 0 log_or1 2 eq1 
+# 1 log_or1 2 log_or0 
+# 0 if1 2 log_or1 
+# 0 if2 1 log_not0 
+# 0 log_not0 2 log_or1 
+# 0 regZ0 0 const21 
+# 0 regZ_index0 0 const4 
+# 1 regZ_index0 0 1 2 add0 
+# 0 mod0 0 regC10 
+# 1 mod0 0 const34 
+# 0 regZ_index1 0 in2 
+# 1 regZ_index1 1 2 add0 
+# 0 regZ1 1 inc1 
+# 0 inc1 0 regC2 
+# 0 out0 0 in2 
+# 0 out1 0 const5 
+# 0 log_and1 2 eq4 
+# 1 log_and1 1 log_not1 
+# 0 log_not1 0 in3 
+# 0 eq4 0 regC3 
+# 1 eq4 0 const6 
+# 0 if3 2 log_and1 
+# 0 regZ2 0 const22 
+# 0 out2 0 const7 
+# 0 out3 0 const8 
+# 0 eq5 0 regC6 
+# 1 eq5 0 const9 
+# 0 log_and2 1 log_not1 
+# 1 log_and2 2 eq5 
+# 0 if4 2 log_and2 
+# 0 eq6 0 regC4 
+# 1 eq6 0 const10 
+# 0 if5 2 eq6 
+# 0 regZ3 0 const11 
+# 0 log_not2 2 eq6 
+# 0 if6 1 log_not2 
+# 0 regZ4 0 const23 
+# 0 out4 0 const12 
+# 0 out5 0 const13 
+# 0 eq7 0 regC7 
+# 1 eq7 0 const14 
+# 0 if7 2 eq7 
+# 0 mul0 0 regC8 
+# 1 mul0 0 const15 
+# 0 change0 2 concat3 
+# 0 concat0 0 regC9 
+# 1 concat0 1 change0 
+# 0 change1 2 concat0 
+# 0 if8 2 sha0 
+# 0 regZ6 0 const24 
+# 0 regZ7 0 const17 
+# 0 regZ8 0 const17 
+# 0 regZ9 0 const18 
+# 0 log_and3 2 3 4 1 log_not1 
+# 1 log_and3 2 eq8 
+# 0 eq8 0 regC11 
+# 1 eq8 0 const19 
+# 0 if9 2 log_and3 
+# 0 regZ10 1 inc5 
+# 0 inc5 0 regC12 
+# 0 out6 0 const20 
+# 0 out7 1 hexToAscii0 
+# 0 eq9 0 regC18 
+# 1 eq9 0 const25 
+# 0 if10 2 eq9 
+# 0 regZ11 0 const26 
+# 0 regZ12 0 const27 
+# 0 index0 0 regC13 
+# 1 index0 0 regC18 
+# 0 regZ5 3 sha0 
+# 0 sub0 0 const33 
+# 1 sub0 2 mod0 
+# 0 reverse3 2 index0 
+# 0 concat3 0 const31 
+# 1 concat3 2 mul0 
+# 0 add0 2 mul1 
+# 1 add0 2 sub0 
+# 0 div0 0 regC5 
+# 1 div0 0 const32 
+# 0 mul1 2 div0 
+# 1 mul1 0 const32 
+# 0 sha0 2 eq7 
+# 1 sha0 1 change1 
+# 0 hexToAscii0 1 reverse3 
+]
+def rightRotate
+[
+input data # 1 32 
+input rotacia # 1 5 
+output res # 1 32 
+{shift_right0} shift_right # 521 245
+{shift_left0} shift_left # 648 193
+{in1} in rotacia # 560 187
+{const0} const (32) # 1 6 # 642 71
+{in2} in data # 574 101
+{in3} in rotacia # 706 75
+{sub0} sub # 676 134
+{bit_or0} bit_or # 569 313
+{out0} out res # 569 381
+# 510 158 
+# 0 shift_right0 0 0 in2 
+# 1 shift_right0 0 in1 
+# 0 shift_left0 0 in2 
+# 1 shift_left0 2 sub0 
+# 0 sub0 0 const0 
+# 1 sub0 0 in3 
+# 0 bit_or0 2 shift_right0 
+# 1 bit_or0 2 shift_left0 
+# 0 out0 2 bit_or0 
+]
+def s0
+[
+input data # 1 32 
+output res # 1 32 
+{in0} in data # 406 46
+{shift_right0} shift_right # 501 260
+{const0} const (7) # 1 5 # 373 115
+{const1} const (18) # 1 5 # 444 166
+{const2} const (3) # 1 5 # 528 201
+{bit_xor0} bit_xor # 359 280
+{bit_xor1} bit_xor # 436 349
+{out0} out res # 435 421
+{rightRotate0} call rightRotate # 316 180
+{rightRotate1} call rightRotate # 415 221
+# 493 171 312 116 
+# 0 shift_right0 0 0 in0 
+# 1 shift_right0 0 const2 
+# 0 bit_xor0 2 rightRotate0 
+# 1 bit_xor0 2 rightRotate1 
+# 0 bit_xor1 2 bit_xor0 
+# 1 bit_xor1 2 shift_right0 
+# 0 out0 2 bit_xor1 
+# 0 rightRotate0 1 0 in0 
+# 1 rightRotate0 0 const0 
+# 0 rightRotate1 0 in0 
+# 1 rightRotate1 0 const1 
+]
+def s1
+[
+input data # 1 32 
+output res # 1 32 
+{in0} in data # 406 46
+{shift_right0} shift_right # 488 274
+{const0} const (17) # 1 5 # 366 127
+{const1} const (19) # 1 5 # 435 165
+{const2} const (10) # 1 5 # 514 209
+{bit_xor0} bit_xor # 354 287
+{bit_xor1} bit_xor # 429 361
+{out0} out res # 428 428
+{rightRotate0} call rightRotate # 306 180
+{rightRotate1} call rightRotate # 409 220
+# 481 166 298 124 
+# 0 shift_right0 0 0 in0 
+# 1 shift_right0 0 const2 
+# 0 bit_xor0 2 rightRotate0 
+# 1 bit_xor0 2 rightRotate1 
+# 0 bit_xor1 2 bit_xor0 
+# 1 bit_xor1 2 shift_right0 
+# 0 out0 2 bit_xor1 
+# 0 rightRotate0 1 0 in0 
+# 1 rightRotate0 0 const0 
+# 0 rightRotate1 0 in0 
+# 1 rightRotate1 0 const1 
+]
+def sha
+[
+input syncVstup # 1 1 
+input data # 16 32 
+output syncVystup # 1 1 
+output res # 64 4 
+register stav # 1 2 
+register cyklus # 1 6 
+register a # 1 32 
+register b # 1 32 
+register c # 1 32 
+register d # 1 32 
+register e # 1 32 
+register f # 1 32 
+register g # 1 32 
+register h # 1 32 
+register w # 16 32 
+{const0} const (0) # 1 2 # 83 34
+{regC0} regC stav # 36 38
+{eq0} eq # 77 94
+{if0} if # 131 195 912 463
+{const1} const (0) # 1 6 # 221 237
+{regZ0} regZ stav # 150 330
+{const29} const (1) # 1 2 # 151 237
+{regZ1} regZ cyklus # 221 328
+{reverse0} reverse # 67 1667
+{reverse1} reverse # 129 1681
+{in0} in data # 295 215
+{regZ2} regZ w # 296 298
+{regZ3} regZ a # 417 279
+{regZ4} regZ b # 563 279
+{regZ5} regZ c # 706 283
+{const3} const (h6a09e667) # 1 32 # 418 208
+{const4} const (hbb67ae85) # 1 32 # 563 207
+{const5} const (h3c6ef372) # 1 32 # 707 208
+{const6} const (ha54ff53a) # 1 32 # 837 209
+{regZ6} regZ d # 839 283
+{const7} const (h510e527f) # 1 32 # 415 331
+{const8} const (h9b05688c) # 1 32 # 560 336
+{const9} const (h1f83d9ab) # 1 32 # 704 336
+{const10} const (h5be0cd19) # 1 32 # 835 335
+{regZ7} regZ e # 415 403
+{regZ8} regZ f # 560 417
+{regZ9} regZ g # 701 423
+{regZ10} regZ h # 837 422
+{const11} const (1) # 1 2 # 86 368
+{eq1} eq # 59 434
+{if1} if # 117 514 732 1238
+{regC1} regC cyklus # 170 531
+{regZ11} regZ cyklus # 142 650
+{inc1} inc # 143 590
+{regC13} regC w # 492 533
+{const12} const (15) # 1 6 # 686 675
+{if2} if # 400 819 510 1033
+{eq2} eq # 209 593
+{const13} const (63) # 1 6 # 236 538
+{if3} if # 208 645 294 734
+{const30} const (2) # 1 2 # 243 650
+{regZ12} regZ stav # 243 714
+{if4} if # 45 1451 961 2017
+{const14} const (2) # 1 2 # 69 1328
+{eq3} eq # 47 1388
+{const15} const (0) # 1 2 # 251 1889
+{regZ13} regZ stav # 252 1959
+{out0} out syncVystup # 98 1958
+{const16} const (1) # 1 1 # 96 1903
+{regC3} regC a # 54 1498
+{regC4} regC b # 114 1566
+{regC5} regC c # 276 1494
+{regC6} regC d # 337 1556
+{regC7} regC e # 493 1488
+{regC8} regC f # 562 1555
+{regC9} regC g # 722 1485
+{regC10} regC h # 814 1543
+{concat1} concat # 94 1735
+{concat2} concat # 293 1727
+{concat3} concat # 559 1735
+{concat4} concat # 815 1721
+{concat5} concat # 206 1790
+{concat6} concat # 718 1794
+{concat7} concat # 479 1875
+{out1} out res # 478 2009
+{change0} change # 64 4 # 478 1943
+{regC11} regC w # 329 535
+{index0} index # 351 596
+{regC32} regC cyklus # 609 810
+{const17} const (1) # 1 6 # 368 544
+{regC12} regC w # 406 533
+{concat0} concat # 468 954
+{const18} const (14) # 1 6 # 446 542
+{index1} index # 430 597
+{const19} const (0) # 1 6 # 530 541
+{index2} index # 511 597
+{regC14} regC w # 565 532
+{regC2} regC cyklus # 628 665
+{const20} const (9) # 1 6 # 601 540
+{index3} index # 583 598
+{add0} add # 548 657
+{add1} add # 394 711
+{add2} add # 461 760
+{gt0} gt # 658 730
+{regZ22} regZ w # 468 1019
+{regC15} regC a # 127 782
+{regC16} regC b # 168 783
+{regC17} regC c # 208 782
+{regC18} regC e # 248 783
+{regC19} regC f # 285 783
+{regZ14} regZ g # 157 1110
+{regC20} regC g # 321 783
+{K} const (h428a2f98 h71374491 hb5c0fbcf he9b5dba5 h3956c25b h59f111f1 h923f82a4 hab1c5ed5 hd807aa98 h12835b01 h243185be h550c7dc3 h72be5d74 h80deb1fe h9bdc06a7 hc19bf174 he49b69c1 hefbe4786 h0fc19dc6 h240ca1cc h2de92c6f h4a7484aa h5cb0a9dc h76f988da h983e5152 ha831c66d hb00327c8 hbf597fc7 hc6e00bf3 hd5a79147 h06ca6351 h14292967 h27b70a85 h2e1b2138 h4d2c6dfc h53380d13 h650a7354 h766a0abb h81c2c92e h92722c85 ha2bfe8a1 ha81a664b hc24b8b70 hc76c51a3 hd192e819 hd6990624 hf40e3585 h106aa070 h19a4c116 h1e376c08 h2748774c h34b0bcb5 h391c0cb3 h4ed8aa4a h5b9cca4f h682e6ff3 h748f82ee h78a5636f h84c87814 h8cc70208 h90befffa ha4506ceb hbef9a3f7 hc67178f2) # 64 32 # 648 901
+{regC21} regC w # 439 835
+{regC22} regC w # 554 811
+{index4} index # 585 875
+{regC23} regC cyklus # 698 890
+{index5} index # 673 955
+{add3} add # 628 1013
+{regC24} regC h # 360 783
+{add4} add # 280 925
+{add5} add # 320 1014
+{add6} add # 375 1093
+{add7} add # 163 920
+{regZ15} regZ e # 420 1219
+{regC25} regC d # 465 1091
+{add8} add # 420 1145
+{regZ16} regZ a # 336 1217
+{add9} add # 337 1144
+{regZ17} regZ b # 508 1175
+{regC26} regC a # 508 1090
+{regZ18} regZ c # 549 1177
+{regC27} regC b # 548 1092
+{regZ19} regZ d # 592 1180
+{regC28} regC c # 592 1092
+{regZ20} regZ f # 124 1110
+{regZ21} regZ h # 192 1111
+{regC29} regC e # 124 1027
+{regC30} regC f # 155 1027
+{regC31} regC g # 189 1029
+{const21} const (h6a09e667) # 1 32 # 134 1486
+{const22} const (ha54ff53a) # 1 32 # 413 1546
+{const23} const (hbb67ae85) # 1 32 # 192 1555
+{const24} const (h510e527f) # 1 32 # 575 1480
+{const25} const (h9b05688c) # 1 32 # 641 1543
+{const26} const (h3c6ef372) # 1 32 # 353 1482
+{const27} const (h1f83d9ab) # 1 32 # 803 1475
+{const28} const (h5be0cd19) # 1 32 # 899 1532
+{add10} add # 62 1577
+{add11} add # 144 1628
+{add12} add # 285 1567
+{add13} add # 345 1626
+{add14} add # 507 1572
+{add15} add # 603 1625
+{add16} add # 738 1553
+{add17} add # 853 1604
+{in1} in syncVstup # 234 42
+{log_and0} log_and # 128 138
+{reverse2} reverse # 277 1646
+{reverse3} reverse # 338 1679
+{reverse4} reverse # 517 1651
+{reverse5} reverse # 593 1680
+{reverse6} reverse # 765 1630
+{reverse7} reverse # 837 1658
+{regC33} regC stav # 35 357
+{regC34} regC stav # 26 1319
+{rotujPole0} call rotujPole # 439 901
+{s00} call s0 # 352 654
+{s10} call s1 # 430 656
+{mS00} call mS0 # 131 857
+{mS10} call mS1 # 248 860
+{maj0} call maj # 188 859
+{ch0} call ch # 307 861
+{merge0} call merge # 584 951
+# 510 866 658 831 
+# 0 eq0 0 regC0 
+# 1 eq0 0 const0 
+# 0 if0 2 log_and0 
+# 0 regZ0 0 const29 
+# 0 regZ1 0 const1 
+# 0 reverse0 2 add10 
+# 0 reverse1 2 add11 
+# 0 regZ2 0 in0 
+# 0 regZ3 0 const3 
+# 0 regZ4 0 const4 
+# 0 regZ5 0 const5 
+# 0 regZ6 0 const6 
+# 0 regZ7 0 const7 
+# 0 regZ8 0 const8 
+# 0 regZ9 0 const9 
+# 0 regZ10 0 const10 
+# 0 eq1 0 regC33 
+# 1 eq1 0 const11 
+# 0 if1 2 eq1 
+# 0 regZ11 1 inc1 
+# 0 inc1 0 regC1 
+# 0 if2 2 gt0 
+# 0 eq2 0 regC1 
+# 1 eq2 0 const13 
+# 0 if3 2 eq2 
+# 0 regZ12 0 const30 
+# 0 if4 2 eq3 
+# 0 eq3 0 regC34 
+# 1 eq3 0 const14 
+# 0 regZ13 0 const15 
+# 0 out0 0 const16 
+# 0 concat1 1 reverse0 
+# 1 concat1 1 reverse1 
+# 0 concat2 1 reverse2 
+# 1 concat2 1 reverse3 
+# 0 concat3 1 reverse4 
+# 1 concat3 1 reverse5 
+# 0 concat4 1 reverse6 
+# 1 concat4 1 reverse7 
+# 0 concat5 2 concat1 
+# 1 concat5 2 concat2 
+# 0 concat6 2 concat3 
+# 1 concat6 2 concat4 
+# 0 concat7 2 concat5 
+# 1 concat7 2 concat6 
+# 0 out1 1 change0 
+# 0 change0 2 concat7 
+# 0 index0 0 regC11 
+# 1 index0 0 const17 
+# 0 concat0 1 rotujPole0 
+# 1 concat0 0 2 add2 
+# 0 index1 0 regC12 
+# 1 index1 0 const18 
+# 0 index2 0 regC13 
+# 1 index2 0 const19 
+# 0 index3 0 regC14 
+# 1 index3 0 const20 
+# 0 add0 2 index2 
+# 1 add0 2 index3 
+# 0 add1 1 s00 
+# 1 add1 1 s10 
+# 0 add2 2 add1 
+# 1 add2 2 add0 
+# 0 gt0 0 regC2 
+# 1 gt0 0 const12 
+# 0 regZ22 2 concat0 
+# 0 regZ14 0 regC30 
+# 0 index4 0 regC22 
+# 1 index4 0 regC32 
+# 0 index5 0 K 
+# 1 index5 0 regC23 
+# 0 add3 3 merge0 
+# 1 add3 2 index5 
+# 0 add4 1 mS10 
+# 1 add4 3 ch0 
+# 0 add5 2 add4 
+# 1 add5 0 regC24 
+# 0 add6 2 add5 
+# 1 add6 2 add3 
+# 0 add7 1 mS00 
+# 1 add7 3 maj0 
+# 0 regZ15 2 add8 
+# 0 add8 2 add6 
+# 1 add8 0 regC25 
+# 0 regZ16 2 add9 
+# 0 add9 2 add7 
+# 1 add9 2 add6 
+# 0 regZ17 0 regC26 
+# 0 regZ18 0 regC27 
+# 0 regZ19 0 regC28 
+# 0 regZ20 0 regC29 
+# 0 regZ21 0 regC31 
+# 0 add10 0 regC3 
+# 1 add10 0 const21 
+# 0 add11 0 regC4 
+# 1 add11 0 const23 
+# 0 add12 0 regC5 
+# 1 add12 0 const26 
+# 0 add13 0 regC6 
+# 1 add13 0 const22 
+# 0 add14 0 regC7 
+# 1 add14 0 const24 
+# 0 add15 0 regC8 
+# 1 add15 0 const25 
+# 0 add16 0 regC9 
+# 1 add16 0 const27 
+# 0 add17 0 regC10 
+# 1 add17 0 const28 
+# 0 log_and0 2 eq0 
+# 1 log_and0 0 in1 
+# 0 reverse2 2 add12 
+# 0 reverse3 2 add13 
+# 0 reverse4 2 add14 
+# 0 reverse5 2 add15 
+# 0 reverse6 2 add16 
+# 0 reverse7 2 add17 
+# 0 rotujPole0 0 regC21 
+# 0 s00 2 index0 
+# 0 s10 2 index1 
+# 0 mS00 0 regC15 
+# 0 mS10 0 regC18 
+# 0 maj0 0 regC15 
+# 1 maj0 0 regC16 
+# 2 maj0 0 regC17 
+# 0 ch0 0 regC18 
+# 1 ch0 0 regC19 
+# 2 ch0 0 regC20 
+# 0 merge0 0 2 add2 
+# 1 merge0 2 index4 
+# 2 merge0 1 2 gt0 
+]
+def mS0
+[
+input data # 1 32 
+output res # 1 32 
+{in0} in data # 406 46
+{const0} const (2) # 1 5 # 365 123
+{const1} const (13) # 1 5 # 434 167
+{const2} const (22) # 1 5 # 514 200
+{bit_xor0} bit_xor # 346 277
+{bit_xor1} bit_xor # 424 357
+{out0} out res # 424 427
+{rightRotate2} call rightRotate # 488 265
+{rightRotate0} call rightRotate # 316 177
+{rightRotate1} call rightRotate # 413 218
+# 476 129 311 123 
+# 0 bit_xor0 2 rightRotate0 
+# 1 bit_xor0 2 rightRotate1 
+# 0 bit_xor1 2 bit_xor0 
+# 1 bit_xor1 2 rightRotate2 
+# 0 out0 2 bit_xor1 
+# 0 rightRotate2 0 0 in0 
+# 1 rightRotate2 0 const2 
+# 0 rightRotate0 1 0 in0 
+# 1 rightRotate0 0 const0 
+# 0 rightRotate1 0 in0 
+# 1 rightRotate1 0 const1 
+]
+def mS1
+[
+input data # 1 32 
+output res # 1 32 
+{in0} in data # 406 46
+{const0} const (6) # 1 5 # 363 126
+{const1} const (11) # 1 5 # 440 163
+{const2} const (25) # 1 5 # 540 201
+{bit_xor0} bit_xor # 362 277
+{bit_xor1} bit_xor # 442 352
+{out0} out res # 440 425
+{rightRotate2} call rightRotate # 517 263
+{rightRotate0} call rightRotate # 325 178
+{rightRotate1} call rightRotate # 410 219
+# 484 130 307 125 
+# 0 bit_xor0 2 rightRotate0 
+# 1 bit_xor0 2 rightRotate1 
+# 0 bit_xor1 2 bit_xor0 
+# 1 bit_xor1 2 rightRotate2 
+# 0 out0 2 bit_xor1 
+# 0 rightRotate2 0 0 in0 
+# 1 rightRotate2 0 const2 
+# 0 rightRotate0 1 0 in0 
+# 1 rightRotate0 0 const0 
+# 0 rightRotate1 0 in0 
+# 1 rightRotate1 0 const1 
+]
+def maj
+[
+input a # 1 32 
+input b # 1 32 
+input c # 1 32 
+output res # 1 32 
+{bit_xor0} bit_xor # 244 243
+{in1} in b # 243 119
+{in2} in c # 335 116
+{bit_and0} bit_and # 204 181
+{in0} in a # 296 44
+{bit_and1} bit_and # 375 189
+{bit_and2} bit_and # 291 182
+{bit_xor1} bit_xor # 326 319
+{out0} out res # 325 389
+# 192 106 384 103 
+# 0 bit_xor0 2 bit_and0 
+# 1 bit_xor0 2 bit_and2 
+# 0 bit_and0 0 0 in0 
+# 1 bit_and0 0 in1 
+# 0 bit_and1 0 in2 
+# 1 bit_and1 1 0 in0 
+# 0 bit_and2 0 in1 
+# 1 bit_and2 0 in2 
+# 0 bit_xor1 2 bit_xor0 
+# 1 bit_xor1 2 bit_and1 
+# 0 out0 2 bit_xor1 
+]
+def ch
+[
+input e # 1 32 
+input f # 1 32 
+input g # 1 32 
+output res # 1 32 
+{in0} in e # 150 77
+{in1} in f # 207 75
+{in2} in g # 57 152
+{bit_and0} bit_and # 181 151
+{bit_not0} bit_not # 116 150
+{bit_and1} bit_and # 92 209
+{bit_xor0} bit_xor # 145 264
+{out0} out res # 145 329
+# 
+# 0 bit_and0 0 in0 
+# 1 bit_and0 0 in1 
+# 0 bit_not0 0 in0 
+# 0 bit_and1 0 in2 
+# 1 bit_and1 1 bit_not0 
+# 0 bit_xor0 2 bit_and1 
+# 1 bit_xor0 2 bit_and0 
+# 0 out0 2 bit_xor0 
+]
+def merge
+[
+input dataTrue # 1 32 
+input dataFalse # 1 32 
+input podmienka # 1 1 
+output res # 1 32 
+{if0} if # 219 138 348 244
+{if1} if # 411 211 539 317
+{in0} in podmienka # 360 68
+{log_not0} log_not # 409 148
+{in1} in dataTrue # 287 157
+{out0} out res # 287 215
+{out1} out res # 482 286
+{in2} in dataFalse # 482 222
+# 
+# 0 if0 0 in0 
+# 0 if1 1 log_not0 
+# 0 log_not0 0 in0 
+# 0 out0 0 in1 
+# 0 out1 0 in2 
+]
+def hexToAscii
+[
+input data # 1 4 
+output res # 1 8 
+{in0} in data # 221 61
+{out0} out res # 185 350
+{const0} const (10) # 1 4 # 284 62
+{lt0} lt # 251 123
+{if0} if # 88 198 293 379
+{if1} if # 354 260 528 424
+{log_not0} log_not # 354 196
+{in1} in data # 152 216
+{add0} add # 187 284
+{const1} const (48) # 1 8 # 223 215
+{const2} const (87) # 1 8 # 477 285
+{add1} add # 443 346
+{in2} in data # 400 281
+{out1} out res # 442 412
+# 
+# 0 out0 2 add0 
+# 0 lt0 0 in0 
+# 1 lt0 0 const0 
+# 0 if0 2 lt0 
+# 0 if1 1 log_not0 
+# 0 log_not0 2 lt0 
+# 0 add0 0 in1 
+# 1 add0 0 const1 
+# 0 add1 0 in2 
+# 1 add1 0 const2 
+# 0 out1 2 add1 
+]
+def rotujPole
+[
+input pole # 16 32 
+output poleNove # 15 32 
+{in0} in pole # 65 63
+{const0} const (1) # 1 4 # 121 62
+{out0} out poleNove # 829 573
+{concat0} concat # 136 176
+{index0} index # 92 115
+{in1} in pole # 171 61
+{const1} const (2) # 1 4 # 223 60
+{index1} index # 191 112
+{index2} index # 288 116
+{in2} in pole # 269 61
+{const2} const (3) # 1 4 # 315 61
+{concat1} concat # 332 186
+{in3} in pole # 361 62
+{const3} const (4) # 1 4 # 409 63
+{index3} index # 382 120
+{concat2} concat # 500 205
+{in4} in pole # 453 63
+{const4} const (5) # 1 4 # 499 63
+{in5} in pole # 545 62
+{const5} const (6) # 1 4 # 595 61
+{in6} in pole # 646 61
+{const6} const (7) # 1 4 # 692 60
+{in7} in pole # 742 62
+{const7} const (8) # 1 4 # 785 61
+{in8} in pole # 835 58
+{const8} const (9) # 1 4 # 882 58
+{index4} index # 472 123
+{index5} index # 565 124
+{index6} index # 664 130
+{index7} index # 758 130
+{index8} index # 855 128
+{concat3} concat # 688 202
+{concat4} concat # 228 248
+{concat5} concat # 587 267
+{concat6} concat # 395 356
+{concat7} concat # 898 207
+{in9} in pole # 932 62
+{const9} const (10) # 1 4 # 983 62
+{in10} in pole # 1039 60
+{const10} const (11) # 1 4 # 1089 58
+{in11} in pole # 1141 59
+{const11} const (14) # 1 4 # 1396 61
+{const12} const (12) # 1 4 # 1194 57
+{in12} in pole # 1244 58
+{const13} const (13) # 1 4 # 1298 57
+{in13} in pole # 1349 60
+{index9} index # 956 128
+{index10} index # 1063 125
+{index11} index # 1164 126
+{index12} index # 1266 122
+{index13} index # 1369 124
+{concat8} concat # 1099 209
+{concat9} concat # 1000 287
+{concat10} concat # 1301 212
+{concat11} concat # 1387 303
+{concat12} concat # 1170 390
+{in14} in pole # 1446 61
+{const14} const (15) # 1 4 # 1496 60
+{index14} index # 1468 126
+{concat13} concat # 830 510
+# 
+# 0 out0 2 concat13 
+# 0 concat0 2 index0 
+# 1 concat0 2 index1 
+# 0 index0 0 in0 
+# 1 index0 0 const0 
+# 0 index1 0 in1 
+# 1 index1 0 const1 
+# 0 index2 0 in2 
+# 1 index2 0 const2 
+# 0 concat1 2 index2 
+# 1 concat1 2 index3 
+# 0 index3 0 in3 
+# 1 index3 0 const3 
+# 0 concat2 2 index4 
+# 1 concat2 2 index5 
+# 0 index4 0 in4 
+# 1 index4 0 const4 
+# 0 index5 0 in5 
+# 1 index5 0 const5 
+# 0 index6 0 in6 
+# 1 index6 0 const6 
+# 0 index7 0 in7 
+# 1 index7 0 const7 
+# 0 index8 0 in8 
+# 1 index8 0 const8 
+# 0 concat3 2 index6 
+# 1 concat3 2 index7 
+# 0 concat4 2 concat0 
+# 1 concat4 2 concat1 
+# 0 concat5 2 concat2 
+# 1 concat5 2 concat3 
+# 0 concat6 2 concat4 
+# 1 concat6 2 concat5 
+# 0 concat7 2 index8 
+# 1 concat7 2 index9 
+# 0 index9 0 in9 
+# 1 index9 0 const9 
+# 0 index10 0 in10 
+# 1 index10 0 const10 
+# 0 index11 0 in11 
+# 1 index11 0 const12 
+# 0 index12 0 in12 
+# 1 index12 0 const13 
+# 0 index13 0 in13 
+# 1 index13 0 const11 
+# 0 concat8 2 index10 
+# 1 concat8 2 index11 
+# 0 concat9 2 concat7 
+# 1 concat9 2 concat8 
+# 0 concat10 2 index12 
+# 1 concat10 2 index13 
+# 0 concat11 2 concat10 
+# 1 concat11 2 index14 
+# 0 concat12 2 concat9 
+# 1 concat12 2 concat11 
+# 0 index14 0 in14 
+# 1 index14 0 const14 
+# 0 concat13 2 concat6 
+# 1 concat13 2 concat12 
+]
